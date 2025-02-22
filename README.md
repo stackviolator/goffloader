@@ -44,3 +44,4 @@ Given that there's already a number of very excellent C implementations of this 
 * OtterHacker's EXCELLENT [COFFLoader blogpost](https://otterhacker.github.io/Malware/CoffLoader.html)
 * Fortra's [No-Consolation BOF](https://github.com/fortra/No-Consolation)
 * The developers of the [(now-archived) Go pecoff library](https://github.com/RIscRIpt/pecoff).
+* @parzel for figuring out a fix for the output capturing issue with the PE loader process.
