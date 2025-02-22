@@ -6,10 +6,11 @@ import (
 	_ "embed"
 	"encoding/hex"
 	"fmt"
-	"github.com/praetorian-inc/goffloader/src/coff"
-	"github.com/praetorian-inc/goffloader/src/lighthouse"
 	"io"
 	"strings"
+
+	"github.com/praetorian-inc/goffloader/src/coff"
+	"github.com/praetorian-inc/goffloader/src/lighthouse"
 )
 
 func decompress(data []byte) ([]byte, error) {
@@ -52,9 +53,9 @@ func RunExecutable(executableBytes []byte, args []string) (string, error) {
 		"z",                                  // Invoke default entry point method
 		"i0",                                 // not using unicode
 		"i0",                                 // we don't want to disable output
-		"i1",                                 // allocating a console so we can capture output
+		"i0",                                 // allocating a console so we can capture output
 		"i0",                                 // don't need to worry about closing handles
-		"i0",                                 // don't need to worry about freeing libraries
+		"z",                                  // don't need to worry about freeing libraries
 		"i1",                                 // don't need to worry about saving
 		"i0",                                 // not listing PEs
 		"z",                                  // not unloading any PEs

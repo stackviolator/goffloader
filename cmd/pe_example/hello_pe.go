@@ -3,6 +3,7 @@ package main
 import (
 	_ "embed"
 	"fmt"
+
 	"github.com/praetorian-inc/goffloader/src/pe"
 )
 
@@ -16,5 +17,5 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	fmt.Println(output)
+	fmt.Printf("Output captured is: %s\n", output)
 }
