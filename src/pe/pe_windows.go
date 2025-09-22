@@ -53,7 +53,7 @@ func RunExecutable(executableBytes []byte, args []string) (string, error) {
 		"z",                                  // Invoke default entry point method
 		"i0",                                 // not using unicode
 		"i0",                                 // we don't want to disable output
-		"i0",                                 // allocating a console so we can capture output
+		"i1",                                 // allocating a console so we can capture output
 		"i0",                                 // don't need to worry about closing handles
 		"z",                                  // don't need to worry about freeing libraries
 		"i1",                                 // don't need to worry about saving
